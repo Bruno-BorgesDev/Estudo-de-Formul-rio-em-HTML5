@@ -7,43 +7,51 @@
 </head>
 <body>
     <form method="GET" action="">
-        <div>
-            <label for="">Email:</label>
-            <input type="email" placeholder="Informe seu E-mail">
-        </div>
-        <div>            
-            <label for="">Senha:</label>
-            <input type="password" placeholder="Informe sua Senha">            
-        </div>
+        <fieldset>
+            <legend>Conta</legend>
+            <div>
+                <label for="">Email:</label>
+                <input type="email" placeholder="Informe seu E-mail">
+            </div>
+            <div>            
+                <label for="">Senha:</label>
+                <input type="password" placeholder="Informe sua Senha">            
+            </div>
+        </fieldset>
 
-        <div>
-            <label for="">Nome:</label>
-            <input type="text" placeholder="Informe seu Nome">            
-        </div>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <div>
+                <label for="">Nome:</label>
+                <input type="text" placeholder="Informe seu Nome">            
+            </div>
 
-        <div>
-            <label for="">Telefone:</label>
-            <input type="text" placeholder="Informe seu Telefone">
-        </div> 
+            <div>
+                <label for="">Telefone:</label>
+                <input type="text" placeholder="Informe seu Telefone">
+            </div> 
 
-        <div>
-            <label for="">Sexo</label>
-            <input type="radio" value="Masculino" name="sexo">
-            <label>Masculino</label>
-            <input type="radio" value="Feminino" name="sexo">
-            <label>Feminino</label>
-        </div>
-      
-        <div>
-            <label for="">Data:</label>
-            <input type="date">            
-        </div>
+            <div>
+                <label for="">Sexo</label>
+                <input type="radio" value="Masculino" name="sexo">
+                <label>Masculino</label>
+                <input type="radio" value="Feminino" name="sexo">
+                <label>Feminino</label>
+            </div>
+        
+            <div>
+                <label for="">Data:</label>
+                <input type="date">            
+            </div>
 
-        <div>
-            <label>Foto de Perfil</label>
-            <input type="file" accept="image/*"> 
-        </div>
+            <div>
+                <label>Foto de Perfil</label>
+                <input type="file" accept="image/*"> 
+            </div>
+    </fieldset>
 
+    <fieldset>
+        <legend>Endereço</legend>
         <div>
             <label for="">Rua:</label>
             <input type="text">
@@ -71,7 +79,10 @@
                <option value="SP">São Paulo</option>
            </select>
        </div>
+    </fieldset>
 
+    <fieldset>
+        <legend>Anuncio</legend>
        <div>
            <label>Como você conehceu a Hello Pizza?</label>
            <textarea maxlength="256" placeholder="Explique como nos conheceu :D"></textarea>           
@@ -80,7 +91,8 @@
        <div>
            <input type="checkbox" checked>
            <label>Desejo receber ofertas por e-mail</label>
-       </div>       
+       </div>
+    </fieldset>       
     </form>
 </body>
 </html>
