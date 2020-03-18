@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estudo com formulários</title>
 </head>
 <body>
-    <form method="GET" action="">
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
         <fieldset>
             <legend>Conta</legend>
             <div>
                 <label for="">Email:</label>
-                <input type="email" placeholder="Informe seu E-mail">
+                <input type="email" name="email" placeholder="Informe seu E-mail" required minlength="5" maxlength="256" />
             </div>
             <div>            
                 <label for="">Senha:</label>
-                <input type="password" placeholder="Informe sua Senha">            
+                <input type="password" name="password" placeholder="Informe sua Senha" required />            
             </div>
         </fieldset>
 
@@ -23,12 +23,12 @@
             <legend>Dados pessoais</legend>
             <div>
                 <label for="">Nome:</label>
-                <input type="text" placeholder="Informe seu Nome">            
+                <input type="text" name="nome"  placeholder="Informe seu Nome" required />            
             </div>
 
             <div>
                 <label for="">Telefone:</label>
-                <input type="text" placeholder="Informe seu Telefone">
+                <input type="text" name="telefone" placeholder="Informe seu Telefone">
             </div> 
 
             <div>
@@ -41,12 +41,12 @@
         
             <div>
                 <label for="">Data:</label>
-                <input type="date">            
+                <input type="date" name="data">            
             </div>
 
             <div>
                 <label>Foto de Perfil</label>
-                <input type="file" accept="image/*"> 
+                <input type="file" accept="image/*" name="foto"> 
             </div>
     </fieldset>
 
@@ -54,27 +54,27 @@
         <legend>Endereço</legend>
         <div>
             <label for="">Rua:</label>
-            <input type="text">
+            <input type="text" name="endereco_rua">
         </div>
 
         <div>
             <label for="">Complemento:</label>
-            <input type="text">
+            <input type="text"  name="endereco_complemento">
         </div>
 
         <div>
             <label for="">Número:</label>
-            <input type="number" min="1" max="999">
+            <input type="number" name="endereco_numero" min="1" max="999">
         </div>
 
         <div>
             <label for="">Cidade:</label>
-            <input type="text">
+            <input type="text" name="endereco_cidade">
        </div>
 
        <div>
            <label>Estado:</label>
-           <select>
+           <select name="endereco_estado">
                <option value="RJ">Rio de Janeiro</option>
                <option value="SP">São Paulo</option>
            </select>
@@ -85,14 +85,16 @@
         <legend>Anuncio</legend>
        <div>
            <label>Como você conehceu a Hello Pizza?</label>
-           <textarea maxlength="256" placeholder="Explique como nos conheceu :D"></textarea>           
+           <textarea maxlength="256" placeholder="Explique como nos conheceu :D" name="adicional"></textarea>           
        </div>
        
        <div>
-           <input type="checkbox" checked>
+           <input type="checkbox" checked name="receber anuncio">
            <label>Desejo receber ofertas por e-mail</label>
        </div>
-    </fieldset>       
+    </fieldset>  
+    
+    <input type="submit" value="Enviar" />
     </form>
 </body>
 </html>
